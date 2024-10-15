@@ -984,3 +984,48 @@ mask-image: linear-gradient(to top, transparent 40%, #079097 80%) !important;
 .not-loaded * {
   animation-play-state: paused !important;
 }
+
+
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1000;
+  width: 100%; /* Ensure the container expands */
+  height: auto; /* Allow the container to adjust its height */
+}
+
+
+.glowing-text {
+  font-size: 1.2rem; /* Adjust the size as needed */
+  color: white; /* Text color */
+  text-shadow: 
+    0 0 5px rgba(255, 255, 255, 0.8),
+    0 0 10px rgba(255, 255, 255, 0.6),
+    0 0 15px rgba(13, 87, 27, 0.9); /* Glow effect */
+  animation: glow 1.5s infinite alternate; /* Glow animation */
+  margin-top: 30px;
+  width: 100%;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 
+      0 0 5px rgba(255, 255, 255, 0.8),
+      0 0 10px rgba(255, 255, 255, 0.6),
+      0 0 15px rgba(13, 87, 27, 0.9);
+  }
+  100% {
+    text-shadow: 
+      0 0 10px rgba(255, 255, 255, 1),
+      0 0 20px rgba(26, 154, 50, 0.9),
+      0 0 30px rgba(13, 87, 27, 0.9);
+  }
+}

@@ -166,7 +166,7 @@ header a, a:visited {
   }
   
   .navigate-button:hover {
-    background-color: rgb(167, 228, 127); /* Change background on hover */
+    background-color: rgb(191, 255, 149); 
     color: rgb(255, 255, 255); /* Change text color on hover */
     transform: scale(1.1); /* Slightly increase size on hover */
     box-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgb(56, 93, 5); /* Brighten glow on hover */

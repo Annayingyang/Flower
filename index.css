@@ -104,14 +104,24 @@ header a, a:visited {
   animation:move-clouds-back 200s linear infinite;
 }
 
+
+
+
 .message-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
     position: absolute;
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust for the size of the container */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    z-index: 2; /* Ensure it appears above stars and clouds */
-  }
+    z-index: 1000;
+    width: 100%; /* Ensure the container expands */
+    height: auto; /* Allow the container to adjust its height */
+}
+
   
   .glowing-text {
     font-size: 3rem; /* Adjust the size as needed */
@@ -119,8 +129,10 @@ header a, a:visited {
     text-shadow: 
       0 0 5px rgba(255, 255, 255, 0.8),
       0 0 10px rgba(255, 255, 255, 0.6),
-      0 0 15px rgba(255, 215, 0, 0.9); /* Glow effect */
+      0 0 15px rgba(13, 87, 27, 0.9); /* Glow effect */
     animation: glow 1.5s infinite alternate; /* Glow animation */
+    margin-top: 30px;
+    width: 100%;
   }
   
   @keyframes glow {
@@ -128,33 +140,35 @@ header a, a:visited {
       text-shadow: 
         0 0 5px rgba(255, 255, 255, 0.8),
         0 0 10px rgba(255, 255, 255, 0.6),
-        0 0 15px rgba(255, 215, 0, 0.9);
+        0 0 15px rgba(13, 87, 27, 0.9);
     }
     100% {
       text-shadow: 
         0 0 10px rgba(255, 255, 255, 1),
-        0 0 20px rgba(255, 255, 0, 1),
-        0 0 30px rgba(255, 215, 0, 1);
+        0 0 20px rgba(26, 154, 50, 0.9),
+        0 0 30px rgba(13, 87, 27, 0.9);
     }
   }
   
   .navigate-button {
-    margin-top: 20px; /* Space between text and button */
+    margin-top: 100px; /* Space between text and button */
     padding: 1rem 2rem; /* Button padding */
-    background-color: gold; /* Button background color */
+    background-color: rgb(194, 209, 179); /* Button background color */
     color: black; /* Button text color */
     font-size: 1.5rem; /* Button text size */
     border: none; /* Remove default border */
     border-radius: 10px; /* Rounded corners */
     cursor: pointer; /* Pointer cursor on hover */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 215, 0, 0.8); /* Glow effect */
-    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(89, 255, 0, 0.8); /* Glow effect */
+    transition: all 0.3s ease;
+    pointer-events: auto; /* Smooth transition for hover effect */
+    
   }
   
   .navigate-button:hover {
-    background-color: white; /* Change background on hover */
-    color: gold; /* Change text color on hover */
+    background-color: rgb(59, 65, 55); /* Change background on hover */
+    color: rgb(255, 255, 255); /* Change text color on hover */
     transform: scale(1.1); /* Slightly increase size on hover */
-    box-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 215, 0, 1); /* Brighten glow on hover */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgb(56, 93, 5); /* Brighten glow on hover */
   }
   
